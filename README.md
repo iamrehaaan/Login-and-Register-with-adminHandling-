@@ -1,5 +1,5 @@
 Login, Register and load data from MongoDb with CRUD operations
-//Register a user
+- Register a user
 //Make verification through email
 //If verified, give access to the user to view his profile
 //Able to edit the profile
