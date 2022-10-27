@@ -1,0 +1,6 @@
+PORT="ADD PORT NUMBER"
+URL_LINK=mongodb+srv://<name>:<cluster>.mongodb.net/testLogin
+SECRECT_STRING=secrectString
+
+VERIFY_PASSWORD="emailVerificationSecrectString"
+EMAIL="AddEmailforEmailVeridication""
