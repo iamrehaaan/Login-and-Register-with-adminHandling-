@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <h1>Welcome to the Dashboard</h1>
+
+    <form>
+    <label for="search"> Search by name or email</label>
+    <input type="text" name="search"/>
+    <button type="submit">Search</button>
+  </form>
+
+    <% if(users.length>0) { %>
+      <% for(let i=0; i<users.length; i++) {%>
+
+       
+<div>
+
+<h2>Username: <%=users[i].name%></h2>
+<p>Email: <%=users[i].email%></p>
+<p>Verify Status: <%=users[i].isVerify%></p>
+<a href=/admin/edit-user?id=<%= users[i]._id %>><button>Edit</button></a>
+<a href=/admin/delete-user?id=<%= users[i]._id %>><button>Delete</button></a>
+
+
+
+
+</div>
+
+
+
+   <%}%>
+      
+      
+      
+      <% } %>
+
+      <%if(currentPage > 1){%>
+        <a href="?page=<%=prevPage%>">Previous</a>
+      
+      <%}%>
+
+<% for(let pageNumber = 1 ; pageNumber <= totalPages; pageNumber++){ %>
+  <a href="?page=<%=pageNumber%>"><%=pageNumber%></a>
+
+<%}%>
+<%if(currentPage < totalPages){%>
+  <a href="?page=<%=nextPage%>">Next</a>
+
+<%}%>
+
+
+  </body>
+</html>
